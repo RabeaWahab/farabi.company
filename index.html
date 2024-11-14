@@ -12,12 +12,60 @@
             font-family: "JetBrains Mono SemiBold", "JetBrains Mono SemiBold Placeholder", monospace;
             background-color: #333;
             color: #ffffff;
-            text-align: center;
+           
+        }
+        .company {
+           font-size: 25px;
+           margin-top:12px;
         }
         .container {
-            max-width: 900px;
+            position: relative;
+            max-width: 100%;
             margin: 0 auto;
             padding: 50px 20px;
+        }
+        .float {
+            float: left;
+        }
+        .inner-container {
+           max-width: 60%; 
+           margin-left:20%;
+        }
+        .inner-container-float { 
+            float: left;
+            width: 50%;
+        }
+        .sixty-px {
+            width: 60px;
+        }
+        .one-hundred-px {
+            width: 100px;
+        }
+        .ten {
+            width: 10%;
+        }
+        .twenty {
+            width: 20%;
+        }
+        .clear {
+            clear: both;
+        }
+        .logo {
+            margin-left: -12px;
+        }
+        .member-img {
+            width:25%;
+            height:fit-content;
+        }
+        .member-img img {
+            width:100%;
+            display: inline-block;
+        }
+        .member-bio {
+            width: 70%;
+            margin-left:5%;
+            margin-top: 0px;
+           
         }
         h1 {
             font-size: 1.5em;
@@ -31,8 +79,18 @@
         }
         p {
             font-size: 0.8em;
-            margin-bottom: 40px;
+            margin: 0px 0px 0px 0px;
             line-height: 1.6;
+        }
+        .top-section {
+         padding-bottom: 20px;
+        }
+        .bottom-section {
+          padding-top:0px;   
+        }
+        .footer-section {
+            padding:0px 0px 0px 15px;
+            
         }
         .contact-button {
             display: inline-block;
@@ -69,23 +127,84 @@
             font-size: 0.9em;
             color: #00aaff;
         }
+
+   @media (max-width: 730px) {
+    .member-img,
+    .member-bio {
+        float: none; /* Remove floating */
+        width: 100%; /* Full width for each section */
+        margin: 0; /* Reset margin to avoid extra spacing */
+    }
+  
+    .member-img img {
+            width:100%;
+            display: inline-block;
+            padding-bottom:8%;
+        }
+        .company {
+           width:100%;
+           font-size: 20px;
+           margin-top:5px;
+        }
+    
+    .inner-container {
+        padding: 10px; /* Adjust padding if needed */
+    }
+    .inner-container-float.logo {
+        width:10%;
+        padding: 0px; /* Adjust padding if needed */
+    }
+    .inner-container-float.company {
+        width:90%;
+        padding: 0px; /* Adjust padding if needed */
+    }
+    h2 {font-size: 1em;}
+}
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="./images/logo.png" alt="Farabi Innovations" width="150">
-        <h1>Farabi Innovations</h1>
-        <h2>Leading Technology Innovation in Retail and Beyond</h2>
-        <p><strong>Rabea Abdelwahab</strong>: Technology Executive & Engineering Leader, expert in solution architecture, cloud computing, serverless solutions, and scalable system design. 
-            With over 16 years of experience in engineering, architecture, and hands-on development, Rabea specializes in aligning business goals with technical strategy, leading teams to deliver high-impact, secure, and scalable systems.</p>
+    <div class="container top-section">
+        <div class="inner-container">
+           <div class="inner-container-float sixty-px">
+              <img class="logo" src="./images/logo.png" alt="Farabi Innovations" width="50">
+           </div>
+           <div class="inner-container-float">
+                <div class="company">Farabi Innovations</div>
+            </div>
+            <div class="clear"></div>
+        </div>
         
-        <h2>Driving Digital Transformation through Data & AI</h2>
-        <p><strong>Ryan Fattini</strong>: Executive leader in Data/Analytics/AI/ML specializing in growth and team building. 
+        <div class="inner-container">
+           <h2>Leading Technology Innovation in Retail and Beyond</h2>
+           <div class="member-img float">
+             <img src="./images/Rabea_Abdelwahab.png" alt="Rabea Abdelwahab" />
+           </div>
+           <div class="member-bio float">
+           <p><strong>Rabea Abdelwahab</strong>: Technology Executive & Engineering Leader, expert in solution architecture, cloud computing, serverless solutions, and scalable system design. 
+            With over 16 years of experience in engineering, architecture, and hands-on development, Rabea specializes in aligning business goals with technical strategy, leading teams to deliver high-impact, secure, and scalable systems.
+           </p>
+           </div>
+           <div class="clear"></div>
+        </div>
+
+         <div class="inner-container">
+         <h2>Driving Digital Transformation through Data & AI</h2>
+         <div class="member-img float">
+            <img src="./images/Ryan_Fattini.png" alt="Ryan Fattini" />
+            </div>
+           <div class="member-bio float">  
+            <p><strong>Ryan Fattini</strong>: Executive leader in Data/Analytics/AI/ML specializing in growth and team building. 
             Recognized for leading Data digital transformation, Ryan’s expertise spans awards like the 2021 Denodo Innovation Award and the 2022 Ventana Research Award. 
             He has led partnerships with academic institutions, spoken at top industry conferences, and holds a patent-pending system for time series forecasting that enhances scenario planning and forecasting accuracy.</p>
+           </div>
+          <div class="clear"></div>
+        </div>
+
     </div>
    <!-- comment -->
-    <div class="container">
+    <div class="container bottom-section">
+        <div class="inner-container">
         <h2>Let's Connect</h2>
         <p class="highlight">We love hearing from innovators, business owners, or anyone looking for a fresh perspective on technology and data. Drop us a line anytime, and let’s work together to solve your challenges.</p>
         <br />
@@ -93,14 +212,17 @@
         <a href="mailto:ryan@farabiinnovations.com" class="contact-button">Email Ryan</a>
         <a href="https://cal.com/farabi" class="contact-button" target="_blank">Book a call</a>
     </div>
-
-    <div class="container">
+  </div>
+  <div class="container footer-section">
+        <div class="inner-container">
         You can also find us on 
         <a href="https://www.linkedin.com/company/farabi-innovations/" class="contact-button" target="_blank">LinkedIn Company Page</a>
         <a href="https://medium.com/@Rabea" class="contact-button" target="_blank">Medium</a>
         <a href="https://intrainnovate.substack.com/" class="contact-button" target="_blank">Substack</a>
     </div>
-
+    </div>
+    <div class="inner-container">
     <footer>&copy; 2024 Farabi Innovations</footer>
+    </div>
 </body>
 </html>
